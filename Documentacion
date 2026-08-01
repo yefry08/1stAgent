@@ -1,0 +1,799 @@
+ Tutorial Completo: Mi Primer Agente de IA con Protocolo MCP
+🗺️ INFOGRAFÍA: Flujo de Trabajo para Crear tu Primer Agente
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                           🚀 CREACIÓN DEL PRIMER AGENTE IA                     │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+PASO 1: PREPARACIÓN BÁSICA
+┌──────────────────────────────┐    ┌──────────────────────────────┐
+│  💻 Verificar Python 3.8+   │    │  📁 Crear Estructura        │
+│     ✓ python --version      │ -> │     3 carpetas simples       │
+│     ✓ Tener VS Code          │    │     No bibliotecas extra    │
+└──────────────────────────────┘    └──────────────────────────────┘
+                                                    │
+                                                    ▼
+PASO 2: ESTRUCTURA SIMPLE DEL PROYECTO
+┌─────────────────────────────────────────────────────────────────┐
+│  📁 mi-agente-investigacion/                                    │
+│  ├── 🔧 servidor-mcp/                                          │
+│  │   └── servidor_simple.py (Datos simulados)                 │
+│  ├── 🤖 agente/                                               │
+│  │   └── agente_final.py (Lógica principal)                   │
+│  └── 📁 config/ (Vacía por ahora)                             │
+└─────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+PASO 3: COMPONENTES BÁSICOS
+┌─────────────────────┐              ┌─────────────────────┐
+│   🔧 SERVIDOR MCP   │   MCP        │   🤖 AGENTE         │
+│                     │ PROTOCOL     │                     │
+│ • 1 herramienta     │<------------>│ • Orquesta proceso  │
+│ • Datos simulados   │              │ • Analiza datos     │
+│ • Sin APIs externas │              │ • Genera reportes   │
+└─────────────────────┘              └─────────────────────┘
+                                                │
+                                                ▼
+PASO 4: FLUJO DE EJECUCIÓN SIMPLE
+┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+│ 👤 Usuario  │->│ 🔍 Búsqueda │->│ 📊 Análisis │->│ 📝 Texto    │->│ 💾 Archivo  │
+│ escribe     │  │ simulada    │  │ estadístico │  │ formato MD  │  │ markdown    │
+│ tema        │  │ 3 artículos │  │ básico      │  │ con tablas  │  │ guardado    │
+└─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘
+
+PASO 5: DATOS SIMULADOS INCLUIDOS
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                              📚 DATOS DE EJEMPLO                               │
+│                                                                                 │
+│  Para cada tema se generan automáticamente:                                     │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────────┐            │
+│  │ 📄 ARTÍCULO 1   │  │ 📄 ARTÍCULO 2   │  │ 📄 ARTÍCULO 3       │            │
+│  │ Introducción a  │  │ Avances en     │  │ Aplicaciones de     │            │
+│  │ [TEMA]         │  │ [TEMA]         │  │ [TEMA]              │            │
+│  │ Dr. García 2024│  │ Prof. López 2023│  │ Dra. Martínez 2024 │            │
+│  └─────────────────┘  └─────────────────┘  └─────────────────────┘            │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+PASO 6: ANÁLISIS AUTOMÁTICO GENERADO
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                            📊 ESTADÍSTICAS AUTOMÁTICAS                         │
+│                                                                                 │
+│  📈 Por Años:           👥 Por Autores:        📋 Generales:                   │
+│  2024: 2 artículos      Dr. García: 1          Total: 3 artículos              │
+│  2023: 1 artículo       Prof. López: 1         Período: 2023-2024             │
+│                         Dra. Martínez: 1       Años cubiertos: 2              │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+PASO 7: REPORTE FINAL GENERADO
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                            📝 ARCHIVO MARKDOWN COMPLETO                        │
+│                                                                                 │
+│  reporte_[TEMA]_[TIMESTAMP].md                                                 │
+│  ├── 📋 Resumen con métricas                                                   │
+│  ├── 📊 Gráficos de barras en texto (█████)                                   │
+│  ├── 📄 Lista detallada de artículos                                          │
+│  ├── 🎯 Conclusiones automáticas                                              │
+│  └── 💾 Opción de guardar archivo                                             │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                              ⏱️ TIEMPO ESTIMADO                                │
+│                                                                                 │
+│  📚 Lectura tutorial: 30 min      🔧 Configuración: 10 min                    │
+│  💻 Implementación: 45 min        🧪 Pruebas: 10 min                          │
+│  🎨 Personalización: 15 min       📝 Comprensión: 15 min                      │
+│                                                                                 │
+│                        ⏱️ TOTAL: ~2 horas                                     │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                          🎯 OBJETIVOS DE APRENDIZAJE BÁSICOS                   │
+│                                                                                 │
+│  ✅ Entender qué es un agente de IA                                           │
+│  ✅ Comprender el protocolo MCP básico                                         │
+│  ✅ Crear primera herramienta de investigación                                 │
+│  ✅ Procesar y analizar datos automáticamente                                  │
+│  ✅ Generar reportes estructurados                                             │
+│  ✅ Bases para proyectos más avanzados                                         │
+└─────────────────────────────────────────────────────────────────────────────────┘
+📋 Tabla de Contenidos
+Introducción
+Requisitos Previos
+Configuración del Entorno
+Creación del Servidor MCP
+Creación del Agente
+Ejecución y Pruebas
+Conceptos Clave
+Extensiones Sugeridas
+🎯 Introducción
+En este tutorial aprenderás a crear tu primer Agente de Inteligencia Artificial que utiliza el Protocolo MCP (Model Context Protocol) para realizar investigación académica automatizada.
+
+¿Qué vamos a construir?
+Un Servidor MCP que simula búsquedas en bases de datos académicas
+Un Agente Inteligente que orquesta el proceso de investigación
+Un sistema que analiza datos y genera reportes automáticamente
+¿Qué aprenderás?
+Arquitectura de agentes de IA
+Protocolo MCP para comunicación entre componentes
+Procesamiento y análisis automático de datos
+Generación de reportes inteligentes
+💻 Requisitos Previos
+Software Necesario
+Python 3.8 o superior (recomendado 3.11+)
+Visual Studio Code (recomendado) o cualquier editor de texto
+Terminal/Command Line access
+Verificar Python
+python --version
+# o
+py --version
+# o
+python3 --version
+Si no tienes Python instalado
+Ve a https://www.python.org/downloads/
+Descarga la versión más reciente
+IMPORTANTE: Marca "Add Python to PATH" durante la instalación
+Reinicia tu computadora después de la instalación
+📁 Configuración del Entorno
+Paso 1: Crear la Estructura de Carpetas
+En Windows:
+
+Crea una carpeta en tu Escritorio llamada mi-agente-investigacion
+Dentro de ella, crea estas 3 carpetas:
+servidor-mcp
+agente
+config
+En Mac/Linux:
+
+mkdir mi-agente-investigacion
+cd mi-agente-investigacion
+mkdir servidor-mcp agente config
+Estructura Final
+mi-agente-investigacion/
+├── servidor-mcp/
+├── agente/
+└── config/
+Paso 2: Abrir en VS Code
+Abre Visual Studio Code
+File → Open Folder
+Selecciona la carpeta mi-agente-investigacion
+🔧 Creación del Servidor MCP
+Paso 1: Crear el archivo del servidor
+Haz clic derecho en la carpeta servidor-mcp
+New File
+Nómbralo: servidor_simple.py
+Paso 2: Código del Servidor
+Copia y pega este código completo en servidor_simple.py:
+
+# servidor-mcp/servidor_simple.py
+
+print("🔧 Iniciando servidor MCP simple...")
+
+class ServidorBasico:
+    def __init__(self):
+        print("✅ Servidor creado")
+        self.herramientas = {}
+        self.crear_herramientas()
+
+    def crear_herramientas(self):
+        """Crea nuestras herramientas"""
+        print("🛠️ Creando herramientas...")
+        
+        def buscar_articulos(tema):
+            """Busca artículos sobre un tema"""
+            print(f"🔍 Buscando artículos sobre: {tema}")
+            
+            # Artículos simulados (por ahora)
+            articulos = [
+                {
+                    "titulo": f"Introducción a {tema}",
+                    "autor": "Dr. García",
+                    "resumen": f"Este artículo explica los conceptos básicos de {tema}.",
+                    "año": 2024
+                },
+                {
+                    "titulo": f"Avances en {tema}",
+                    "autor": "Prof. López",
+                    "resumen": f"Exploramos los últimos avances en el campo de {tema}.",
+                    "año": 2023
+                },
+                {
+                    "titulo": f"Aplicaciones prácticas de {tema}",
+                    "autor": "Dra. Martínez",
+                    "resumen": f"Casos de uso reales donde {tema} ha demostrado ser efectivo.",
+                    "año": 2024
+                }
+            ]
+            
+            print(f"✅ Encontrados {len(articulos)} artículos")
+            return articulos
+
+        # Guardar la herramienta
+        self.herramientas["buscar_articulos"] = buscar_articulos
+        print("✅ Herramienta 'buscar_articulos' creada")
+
+    def usar_herramienta(self, nombre, parametros):
+        """Usa una herramienta específica"""
+        print(f"🔧 Usando herramienta: {nombre}")
+        
+        if nombre in self.herramientas:
+            herramienta = self.herramientas[nombre]
+            resultado = herramienta(parametros)
+            print(f"✅ Herramienta ejecutada correctamente")
+            return resultado
+        else:
+            print(f"❌ Herramienta '{nombre}' no encontrada")
+            return None
+
+    def listar_herramientas(self):
+        """Muestra qué herramientas tenemos"""
+        print("📋 Herramientas disponibles:")
+        for nombre in self.herramientas.keys():
+            print(f"  - {nombre}")
+        return list(self.herramientas.keys())
+
+# Probemos nuestro servidor
+def probar_servidor():
+    print("🚀 PROBANDO NUESTRO SERVIDOR")
+    print("=" * 40)
+    
+    # Crear el servidor
+    servidor = ServidorBasico()
+    
+    # Ver qué herramientas tiene
+    servidor.listar_herramientas()
+    
+    # Usar la herramienta
+    print("\n🔍 Probando búsqueda...")
+    resultados = servidor.usar_herramienta("buscar_articulos", "inteligencia artificial")
+    
+    # Mostrar resultados
+    print("\n📚 RESULTADOS:")
+    for i, articulo in enumerate(resultados, 1):
+        print(f"\n{i}. {articulo['titulo']}")
+        print(f"   Autor: {articulo['autor']}")
+        print(f"   Año: {articulo['año']}")
+        print(f"   Resumen: {articulo['resumen']}")
+
+# Si ejecutamos este archivo directamente, probar el servidor
+if __name__ == "__main__":
+    probar_servidor()
+Paso 3: Probar el Servidor
+Abre la terminal en VS Code (Terminal → New Terminal)
+Navega a la carpeta del servidor:
+cd servidor-mcp
+Ejecuta el servidor:
+python servidor_simple.py
+# o si no funciona:
+py servidor_simple.py
+Deberías ver:
+
+🔧 Iniciando servidor MCP simple...
+✅ Servidor creado
+🛠️ Creando herramientas...
+✅ Herramienta 'buscar_articulos' creada
+🚀 PROBANDO NUESTRO SERVIDOR
+========================================
+📋 Herramientas disponibles:
+  - buscar_articulos
+...
+🤖 Creación del Agente
+Paso 1: Crear el archivo del agente
+Haz clic derecho en la carpeta agente
+New File
+Nómbralo: agente_final.py
+Paso 2: Código del Agente Completo
+Copia y pega este código completo en agente_final.py:
+
+# agente/agente_final.py
+
+print("🤖 Iniciando agente final...")
+
+import sys
+import os
+
+# ARREGLO: Añadir rutas de forma más robusta
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+servidor_dir = os.path.join(parent_dir, 'servidor-mcp')
+print(f"🔍 Buscando servidor en: {servidor_dir}")
+
+# Añadir al path
+sys.path.insert(0, servidor_dir)
+
+# Verificar que podemos importar
+try:
+    from servidor_simple import ServidorBasico
+    print("✅ Servidor importado correctamente")
+except ImportError as e:
+    print(f"❌ Error importando servidor: {e}")
+    print("🔧 Creando servidor inline...")
+    
+    # Si no puede importar, crear el servidor aquí mismo
+    class ServidorBasico:
+        def __init__(self):
+            print("✅ Servidor creado inline")
+            self.herramientas = {}
+            self.crear_herramientas()
+
+        def crear_herramientas(self):
+            print("🛠️ Creando herramientas...")
+            
+            def buscar_articulos(tema):
+                print(f"🔍 Buscando artículos sobre: {tema}")
+                articulos = [
+                    {
+                        "titulo": f"Introducción a {tema}",
+                        "autor": "Dr. García",
+                        "resumen": f"Este artículo explica los conceptos básicos de {tema}.",
+                        "año": 2024
+                    },
+                    {
+                        "titulo": f"Avances en {tema}",
+                        "autor": "Prof. López",
+                        "resumen": f"Exploramos los últimos avances en el campo de {tema}.",
+                        "año": 2023
+                    },
+                    {
+                        "titulo": f"Aplicaciones prácticas de {tema}",
+                        "autor": "Dra. Martínez",
+                        "resumen": f"Casos de uso reales donde {tema} ha demostrado ser efectivo.",
+                        "año": 2024
+                    }
+                ]
+                print(f"✅ Encontrados {len(articulos)} artículos")
+                return articulos
+
+            self.herramientas["buscar_articulos"] = buscar_articulos
+            print("✅ Herramienta 'buscar_articulos' creada")
+
+        def usar_herramienta(self, nombre, parametros):
+            print(f"🔧 Usando herramienta: {nombre}")
+            if nombre in self.herramientas:
+                herramienta = self.herramientas[nombre]
+                resultado = herramienta(parametros)
+                print(f"✅ Herramienta ejecutada correctamente")
+                return resultado
+            else:
+                print(f"❌ Herramienta '{nombre}' no encontrada")
+                return None
+
+class AgenteArreglado:
+    def __init__(self):
+        print("🤖 Creando agente...")
+        self.servidor = ServidorBasico()
+        print("✅ Agente listo")
+
+    def investigar_completo(self, tema):
+        """Hace investigación COMPLETA con análisis"""
+        print(f"\n🎯 INVESTIGANDO: {tema}")
+        print("=" * 50)
+
+        # PASO 1: Buscar artículos
+        print("📚 PASO 1: Buscando artículos...")
+        articulos = self.servidor.usar_herramienta("buscar_articulos", tema)
+        
+        if not articulos:
+            print("❌ No se encontraron artículos")
+            return None
+
+        print(f"✅ Encontrados {len(articulos)} artículos")
+
+        # PASO 2: Mostrar artículos encontrados
+        print("\n📋 ARTÍCULOS ENCONTRADOS:")
+        for i, articulo in enumerate(articulos, 1):
+            print(f"  {i}. {articulo['titulo']}")
+            print(f"     Autor: {articulo['autor']} ({articulo['año']})")
+
+        # PASO 3: ANÁLISIS
+        print(f"\n🧠 PASO 2: ANALIZANDO DATOS...")
+        
+        # Contar por años
+        años = {}
+        for articulo in articulos:
+            año = articulo['año']
+            años[año] = años.get(año, 0) + 1
+        
+        print("📊 Análisis por años:")
+        for año, cantidad in años.items():
+            print(f"  {año}: {cantidad} artículos")
+
+        # Contar por autores
+        autores = {}
+        for articulo in articulos:
+            autor = articulo['autor']
+            autores[autor] = autores.get(autor, 0) + 1
+        
+        print("\n👥 Análisis por autores:")
+        for autor, cantidad in autores.items():
+            print(f"  {autor}: {cantidad} artículos")
+
+        # Estadísticas generales
+        total = len(articulos)
+        año_mas_reciente = max(años.keys())
+        año_mas_antiguo = min(años.keys())
+        
+        print(f"\n📈 ESTADÍSTICAS:")
+        print(f"  Total artículos: {total}")
+        print(f"  Año más reciente: {año_mas_reciente}")
+        print(f"  Año más antiguo: {año_mas_antiguo}")
+        print(f"  Período cubierto: {año_mas_reciente - año_mas_antiguo + 1} años")
+
+        # PASO 4: CREAR REPORTE
+        print(f"\n📝 PASO 3: CREANDO REPORTE...")
+        
+        reporte = f"""# REPORTE DE INVESTIGACIÓN: {tema.upper()}
+
+## RESUMEN:
+- Total de artículos: {total}
+- Período: {año_mas_antiguo} - {año_mas_reciente}
+- Años cubiertos: {año_mas_reciente - año_mas_antiguo + 1}
+
+## DISTRIBUCIÓN POR AÑOS:
+"""
+        
+        for año, cantidad in años.items():
+            porcentaje = (cantidad / total) * 100
+            barras = "█" * int(porcentaje / 20)
+            reporte += f"- {año}: {cantidad} artículos ({porcentaje:.1f}%) {barras}\n"
+
+        reporte += f"""
+## AUTORES:
+"""
+        for autor, cantidad in autores.items():
+            reporte += f"- {autor}: {cantidad} publicaciones\n"
+
+        reporte += f"""
+## ARTÍCULOS DETALLADOS:
+"""
+        for i, articulo in enumerate(articulos, 1):
+            reporte += f"""
+{i}. {articulo['titulo']}
+   Autor: {articulo['autor']}
+   Año: {articulo['año']}
+   Resumen: {articulo['resumen']}
+"""
+
+        reporte += f"""
+## CONCLUSIONES:
+- El tema "{tema}" tiene {total} artículos en nuestra base
+- {'Alta' if total >= 3 else 'Baja'} actividad de investigación
+- Publicaciones distribuidas en {len(años)} años diferentes
+- Autores más productivos: {', '.join([f"{a} ({c})" for a, c in autores.items()])}
+"""
+
+        print("✅ Reporte creado")
+
+        # PASO 5: MOSTRAR REPORTE COMPLETO
+        print(f"\n📄 REPORTE COMPLETO:")
+        print("=" * 60)
+        print(reporte)
+        print("=" * 60)
+
+        # PASO 6: OFRECER GUARDAR
+        try:
+            guardar = input(f"\n💾 ¿Quieres guardar este reporte? (s/n): ").strip().lower()
+            if guardar in ['s', 'si', 'sí', 'yes', 'y']:
+                nombre_archivo = f"reporte_{tema.replace(' ', '_').replace('/', '_')}.md"
+                with open(nombre_archivo, 'w', encoding='utf-8') as f:
+                    f.write(reporte)
+                print(f"✅ Guardado como: {nombre_archivo}")
+            else:
+                print("📝 Reporte no guardado")
+        except Exception as e:
+            print(f"⚠️ Error al guardar: {e}")
+
+        return reporte
+
+def main():
+    print("\n🚀 AGENTE DE INVESTIGACIÓN CON ANÁLISIS COMPLETO")
+    print("=" * 60)
+    print("📋 Instrucciones:")
+    print("- Escribe un tema para investigar (ej: 'machine learning')")
+    print("- Escribe 'salir' para terminar")
+    print("=" * 60)
+
+    try:
+        agente = AgenteArreglado()
+        
+        while True:
+            try:
+                tema = input(f"\n🎯 ¿Qué tema investigar? ").strip()
+                
+                if tema.lower() in ['salir', 'exit', 'quit', '']:
+                    print("👋 ¡Hasta luego!")
+                    break
+
+                if tema:
+                    print(f"\n🚀 Perfecto, investigando '{tema}'...")
+                    agente.investigar_completo(tema)
+                else:
+                    print("⚠️ Escribe un tema válido")
+
+            except KeyboardInterrupt:
+                print("\n\n👋 ¡Hasta luego!")
+                break
+            except Exception as e:
+                print(f"⚠️ Error inesperado: {e}")
+                print("🔄 Continuando...")
+
+    except Exception as e:
+        print(f"❌ Error crítico: {e}")
+        print("🔧 Verifica que los archivos estén en su lugar")
+
+if __name__ == "__main__":
+    main()
+🚀 Ejecución y Pruebas
+Paso 1: Ejecutar el Agente
+Abre la terminal en VS Code
+Asegúrate de estar en la carpeta raíz:
+# Deberías ver algo como:
+PS C:\Users\Usuario\Documents\mi-agente-investigacion>
+Ejecuta el agente:
+python agente/agente_final.py
+# o si no funciona:
+py agente/agente_final.py
+Paso 2: Interactuar con el Agente
+Cuando veas:
+
+🎯 ¿Qué tema investigar?
+Prueba estos temas:
+
+machine learning
+inteligencia artificial
+blockchain
+biotecnología
+Paso 3: Ejemplo de Salida Esperada
+🎯 INVESTIGANDO: machine learning
+==================================================
+📚 PASO 1: Buscando artículos...
+🔍 Buscando artículos sobre: machine learning
+✅ Encontrados 3 artículos
+✅ Encontrados 3 artículos
+
+📋 ARTÍCULOS ENCONTRADOS:
+  1. Introducción a machine learning
+     Autor: Dr. García (2024)
+  2. Avances en machine learning
+     Autor: Prof. López (2023)
+  3. Aplicaciones prácticas de machine learning
+     Autor: Dra. Martínez (2024)
+
+🧠 PASO 2: ANALIZANDO DATOS...
+📊 Análisis por años:
+  2024: 2 artículos
+  2023: 1 artículos
+
+👥 Análisis por autores:
+  Dr. García: 1 artículos
+  Prof. López: 1 artículos
+  Dra. Martínez: 1 artículos
+
+📈 ESTADÍSTICAS:
+  Total artículos: 3
+  Año más reciente: 2024
+  Año más antiguo: 2023
+  Período cubierto: 2 años
+
+📝 PASO 3: CREANDO REPORTE...
+✅ Reporte creado
+
+📄 REPORTE COMPLETO:
+============================================================
+# REPORTE DE INVESTIGACIÓN: MACHINE LEARNING
+
+## RESUMEN:
+- Total de artículos: 3
+- Período: 2023 - 2024
+- Años cubiertos: 2
+
+## DISTRIBUCIÓN POR AÑOS:
+- 2024: 2 artículos (66.7%) ███
+- 2023: 1 artículos (33.3%) █
+
+## AUTORES:
+- Dr. García: 1 publicaciones
+- Prof. López: 1 publicaciones
+- Dra. Martínez: 1 publicaciones
+
+## ARTÍCULOS DETALLADOS:
+
+1. Introducción a machine learning
+   Autor: Dr. García
+   Año: 2024
+   Resumen: Este artículo explica los conceptos básicos de machine learning.
+
+2. Avances en machine learning
+   Autor: Prof. López
+   Año: 2023
+   Resumen: Exploramos los últimos avances en el campo de machine learning.
+
+3. Aplicaciones prácticas de machine learning
+   Autor: Dra. Martínez
+   Año: 2024
+   Resumen: Casos de uso reales donde machine learning ha demostrado ser efectivo.
+
+## CONCLUSIONES:
+- El tema "machine learning" tiene 3 artículos en nuestra base
+- Alta actividad de investigación
+- Publicaciones distribuidas en 2 años diferentes
+- Autores más productivos: Dr. García (1), Prof. López (1), Dra. Martínez (1)
+
+============================================================
+
+💾 ¿Quieres guardar este reporte? (s/n):
+🧠 Conceptos Clave
+1. Arquitectura del Sistema
+USUARIO → AGENTE → SERVIDOR MCP → DATOS
+    ↑         ↓         ↓          ↓
+    ←─ REPORTE ←─ ANÁLISIS ←─ RESULTADOS
+Componentes:
+
+Usuario: Proporciona el tema de investigación
+Agente: Orquesta todo el proceso, toma decisiones
+Servidor MCP: Proveedor de herramientas y recursos
+Datos: Información procesada y analizada
+2. Protocolo MCP (Model Context Protocol)
+¿Qué es MCP?
+
+Protocolo de comunicación entre agentes y servicios
+Permite separar la lógica del agente de las herramientas
+Facilita la extensibilidad y mantenimiento
+En nuestro ejemplo:
+
+# El agente solicita al servidor:
+articulos = self.servidor.usar_herramienta("buscar_articulos", tema)
+
+# El servidor responde con datos estructurados:
+return [{"titulo": "...", "autor": "...", "año": 2024}]
+3. Flujo de Procesamiento
+Input del Usuario → El usuario proporciona un tema
+Búsqueda → El agente consulta al servidor MCP
+Análisis → El agente procesa los datos recibidos
+Síntesis → Genera estadísticas y patrones
+Reporte → Crea un documento estructurado
+Output → Presenta resultados al usuario
+4. Análisis Automático
+El agente realiza estos análisis automáticamente:
+
+Análisis Temporal: Distribución de publicaciones por año
+Análisis de Autoría: Productividad de diferentes autores
+Estadísticas Generales: Totales, rangos, promedios
+Visualizaciones: Barras de progreso en texto
+Conclusiones: Insights automáticos basados en datos
+🛠️ Solución de Problemas Comunes
+Error: "python not found"
+Solución:
+
+# Prueba estos comandos en orden:
+py agente/agente_final.py
+python3 agente/agente_final.py
+C:\Users\[TuUsuario]\AppData\Local\Programs\Python\Python311\python.exe agente/agente_final.py
+Error: "ModuleNotFoundError"
+Causa: El agente no encuentra el servidor
+Solución: El código incluye manejo de errores automático. Si aparece este error, el agente creará el servidor internamente.
+
+Error: "Permission denied"
+Causa: No tienes permisos para crear archivos
+Solución:
+
+Ejecuta VS Code como administrador
+O cambia a una carpeta donde tengas permisos de escritura
+El agente no muestra análisis
+Causa: Error en la ejecución del código
+Solución: Verifica que copiaste todo el código completo del agente
+
+🚀 Extensiones Sugeridas
+Nivel Básico
+Más herramientas en el servidor:
+def analizar_sentimiento(textos):
+    # Análisis de sentimiento básico
+    pass
+
+def extraer_palabras_clave(textos):
+    # Extracción de términos importantes
+    pass
+Diferentes formatos de salida:
+Reportes en HTML
+Exportación a CSV
+Gráficos simples
+Nivel Intermedio
+Conexión a APIs reales:
+
+arXiv API para papers académicos
+PubMed para literatura médica
+Google Scholar (web scraping)
+Base de datos:
+
+SQLite para persistir investigaciones
+Historial de búsquedas
+Cache de resultados
+Nivel Avanzado
+Procesamiento de Lenguaje Natural:
+
+Análisis de temas con LDA
+Clasificación automática
+Resúmenes automáticos
+Visualizaciones avanzadas:
+
+Gráficos con matplotlib/plotly
+Mapas conceptuales
+Líneas de tiempo interactivas
+Interfaz web:
+
+Flask/FastAPI backend
+Frontend en React/Vue
+Dashboard interactivo
+📚 Recursos Adicionales
+Documentación
+Python Official Documentation
+MCP Protocol Specification
+VS Code Python Tutorial
+Bibliotecas útiles para extensiones
+requests: Para APIs HTTP
+beautifulsoup4: Para web scraping
+pandas: Para análisis de datos
+matplotlib/seaborn: Para visualizaciones
+sqlite3: Para bases de datos
+flask: Para interfaces web
+Datasets para práctica
+arXiv Dataset: Papers de física y matemáticas
+PubMed Central: Literatura biomédica
+Semantic Scholar: Papers de ciencias de la computación
+🎯 Ejercicios Propuestos
+Ejercicio 1: Personalización Básica
+Modifica los datos simulados para incluir tu área de estudio
+Añade más campos como "revista", "doi", "palabras_clave"
+Cambia los autores por nombres de tu preferencia
+Ejercicio 2: Análisis Expandido
+Añade análisis de longitud de títulos
+Calcula promedios de palabras por resumen
+Identifica patrones en las palabras clave
+Ejercicio 3: Mejoras en Reportes
+Añade índice automático al reporte
+Incluye fecha y hora de generación
+Crea plantillas para diferentes tipos de reportes
+Ejercicio 4: Interactividad
+Añade comando "help" con instrucciones
+Implementa comando "history" para ver búsquedas previas
+Permite filtrar resultados por año o autor
+📝 Evaluación y Entrega
+Criterios de Evaluación
+Funcionalidad (40%): El código ejecuta sin errores
+Comprensión (30%): Demuestra entendimiento de conceptos MCP
+Personalización (20%): Implementa al menos una mejora propia
+Documentación (10%): Código bien comentado y explicado
+Entregables
+Carpeta completa del proyecto funcionando
+Reporte de al menos 3 búsquedas diferentes
+Documento explicando una mejora implementada
+Video de 5 minutos demostrando el funcionamiento
+Preguntas de Reflexión
+¿Cómo cambiarías el sistema para manejar miles de artículos?
+¿Qué ventajas tiene separar el agente del servidor MCP?
+¿Cómo implementarías búsquedas más inteligentes?
+¿Qué consideraciones éticas hay en sistemas de IA para investigación?
+🎓 Conceptos Fundamentales Aprendidos
+Arquitectura de Agentes
+Separación de responsabilidades: Cada componente tiene una función clara
+Protocolo de comunicación: MCP facilita la interacción entre partes
+Modularidad: Permite extensiones y mejoras independientes
+Procesamiento de Datos
+Entrada → Procesamiento → Salida: Flujo básico de información
+Análisis estadístico: Extracción de patrones y métricas
+Generación de reportes: Presentación estructurada de resultados
+Programación de Sistemas
+Manejo de errores: Código robusto que funciona en diferentes situaciones
+Importación de módulos: Organización de código en archivos separados
+Interfaz de usuario: Interacción básica por línea de comandos
+🔄 Próximos Pasos
+Después de completar este tutorial
+Experimenta con diferentes temas de investigación
+Personaliza los datos simulados según tus intereses
+Implementa una de las extensiones sugeridas
+Prepárate para el Tutorial V2 con visualizaciones
+Preparación para V2
+El siguiente tutorial incluirá:
+
+Conexión a APIs reales simples
+Gráficos básicos con matplotlib
+Análisis de datos más sofisticado
+Reportes con visualizaciones

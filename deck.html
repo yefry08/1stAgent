@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AISDOM Pitch Deck | BioPREVAIL x CEPI Challenge 2026-27</title>
+<style>
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #0B1F3A; }
+  body {
+    font-family: Inter, "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color: #FFFFFF;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  section {
+    position: relative;
+    width: 1280px; height: 720px;
+    padding: 72px 96px 88px 96px;
+    background: #0B1F3A;
+    overflow: hidden;
+    page-break-after: always; break-after: page;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  section:last-of-type { page-break-after: auto; break-after: auto; }
+  .accent { color: #2EC4B6; }
+  .kicker {
+    font-size: 16px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+    color: #2EC4B6; margin-bottom: 22px;
+  }
+  h1 { font-size: 54px; line-height: 1.12; font-weight: 700; letter-spacing: -.01em; }
+  h2 { font-size: 46px; line-height: 1.12; font-weight: 700; letter-spacing: -.01em; margin-bottom: 36px; }
+  p  { font-size: 28px; line-height: 1.5; color: #E8EEF5; }
+  .rule { width: 72px; height: 5px; background: #2EC4B6; margin: 28px 0; border-radius: 3px; }
+  .footer {
+    position: absolute; left: 96px; right: 96px; bottom: 32px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 14px; color: #8FA3BC; letter-spacing: .04em;
+    border-top: 1px solid rgba(143,163,188,.28); padding-top: 14px;
+  }
+  .footer .num { color: #2EC4B6; font-weight: 600; }
+  mark.ph { background: #FFE81A; color: #0B1F3A; padding: 1px 8px; border-radius: 4px; font-weight: 600; }
+
+  /* cover */
+  .cover { justify-content: center; }
+  .cover h1 { font-size: 58px; max-width: 1040px; }
+  .cover .sub { font-size: 24px; color: #2EC4B6; font-weight: 600; margin-top: 4px; }
+  .cover .who { font-size: 22px; line-height: 1.5; color: #E8EEF5; margin-top: 8px; }
+  .cover .who b { color: #fff; }
+  .cover .contact { font-size: 20px; color: #E8EEF5; margin-top: 14px; }
+
+  /* slide 4 */
+  .analogy { font-size: 30px; line-height: 1.5; max-width: 1040px; }
+
+  /* slide 5 flow */
+  .flow { display: flex; align-items: stretch; gap: 0; margin: 8px 0 34px; }
+  .step {
+    flex: 1; background: #12305A; border: 1.5px solid rgba(46,196,182,.55); border-radius: 14px;
+    padding: 22px 20px; min-height: 210px; position: relative;
+  }
+  .step .n { font-size: 15px; font-weight: 700; color: #2EC4B6; letter-spacing: .1em; margin-bottom: 12px; }
+  .step .t { font-size: 20px; line-height: 1.35; font-weight: 600; color: #fff; }
+  .step .t small { display: block; margin-top: 8px; font-size: 15px; font-weight: 400; color: #B8C7D9; line-height: 1.35; }
+  .arrow { width: 40px; display: flex; align-items: center; justify-content: center; flex: none; }
+  .note { font-size: 24px; color: #E8EEF5; }
+
+  /* slide 6 list */
+  ul.plain { list-style: none; }
+  ul.plain li { font-size: 25px; line-height: 1.35; color: #E8EEF5; padding: 11px 0 11px 34px; position: relative; }
+  ul.plain li::before {
+    content: ""; position: absolute; left: 0; top: 22px; width: 12px; height: 12px;
+    background: #2EC4B6; border-radius: 3px;
+  }
+  ul.plain li b { color: #fff; font-weight: 600; }
+
+  /* slide 7 numbered */
+  ol.num { list-style: none; counter-reset: c; }
+  ol.num li { counter-increment: c; font-size: 25px; line-height: 1.35; color: #E8EEF5; padding: 12px 0 12px 62px; position: relative; }
+  ol.num li::before {
+    content: counter(c); position: absolute; left: 0; top: 10px; width: 40px; height: 40px;
+    border-radius: 50%; background: #2EC4B6; color: #0B1F3A; font-weight: 700; font-size: 20px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* slide 8 chart */
+  .chart { display: flex; flex-direction: column; gap: 11px; }
+  .row .lab { font-size: 18px; color: #E8EEF5; margin-bottom: 5px; line-height: 1.2; }
+  .row .bar-wrap { display: flex; align-items: center; gap: 14px; }
+  .row .bar { height: 20px; background: #2EC4B6; border-radius: 4px; }
+  .row .amt { font-size: 20px; font-weight: 700; color: #fff; min-width: 80px; }
+  .row.dim .bar { background: #2EC4B6; }
+  .total { margin-top: 14px; font-size: 18px; color: #8FA3BC; }
+
+  /* slide 10 */
+  .cols { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; }
+  .cols h3 { font-size: 17px; letter-spacing: .12em; text-transform: uppercase; color: #2EC4B6; margin-bottom: 12px; font-weight: 600; }
+  .cols p { font-size: 20px; line-height: 1.5; }
+  .cols .name { font-weight: 700; color: #fff; }
+  .cols ul { list-style: none; }
+  .cols ul li { font-size: 20px; line-height: 1.4; color: #E8EEF5; padding: 7px 0 7px 26px; position: relative; }
+  .cols ul li::before { content: ""; position: absolute; left: 0; top: 17px; width: 9px; height: 9px; background: #2EC4B6; border-radius: 2px; }
+  .person { margin-bottom: 20px; }
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="cover">
+  <div class="kicker">Investor pitch</div>
+  <h1>Testing the biosecurity risks of Latin American <span class="accent">open-weight AI models</span></h1>
+  <div class="rule"></div>
+  <div class="sub">BioPREVAIL x CEPI Biosecurity Innovation Challenge 2026-27</div>
+  <p class="who" style="margin-top:26px;"><b>Yefry Osvaldo Núñez Rubí</b><br>Founder and President, AI Safety Dominicana (AISDOM)</p>
+  <p class="contact">Contact: <mark class="ph">[EMAIL]</mark></p>
+</section>
+
+<!-- 2 PROBLEM -->
+<section>
+  <div class="kicker">The problem</div>
+  <h2>Nobody has publicly tested these models in Spanish</h2>
+  <p style="font-size:25px; max-width:1060px;">AI language models are entering life-science workflows, but dual-use biosecurity evaluations are done almost entirely in English and on a few frontier models. Open-weight models from Latin America and the Caribbean, such as LatamGPT, can be downloaded, modified and run offline, so safeguards cannot be monitored or recalled after release. Nobody has publicly tested whether they give meaningful help on harmful biological queries in Spanish.</p>
+  <div class="footer"><span>AISDOM | BioPREVAIL x CEPI Challenge 2026-27</span><span class="num">2</span></div>
+</section>
+
+<!-- 3 WHY 100 DAYS -->
+<section>
+  <div class="kicker">Why now</div>
+  <h2>Why 100 Days Mission speed raises the stakes</h2>
+  <p style="font-size:27px; max-width:1040px;">Compressed vaccine timelines favor fast adoption of AI tools and leave less time for review. Biosafety and biosecurity practices vary widely where research takes place. An unevaluated model becomes a larger, harder-to-see misuse surface exactly when the response needs trust and speed.</p>
+  <div class="footer"><span>AISDOM | BioPREVAIL x CEPI Challenge 2026-27</span><span class="num">3</span></div>
+</section>
+
+<!-- 4 SOLUTION -->
+<section>
+  <div class="kicker">The solution in plain language</div>
+  <h2>We inspect AI models like a safety inspector tests a car</h2>
+  <p class="analogy" style="font-size:25px; max-width:1060px;">We ask a designed set of questions in Spanish and English, record where a model helps when it should refuse, compare it with well-known models, and publish the results with a short guide so developers can fix problems and regulators know what to ask for.</p>
+  <div class="footer"><span>AISDOM | BioPREVAIL x CEPI Challenge 2026-27</span><span class="num">4</span></div>
+</section>
+
+<!-- 5 HOW IT WORKS -->
+<section>
+  <div class="kicker">How it works</div>
+  <h2 style="margin-bottom:28px;">Four steps, fully remote</h2>
+  <div class="flow">
+    <div class="step"><div class="n">STEP 1</div><div class="t">Expert-reviewed prompt set by risk category</div></div>
+    <div class="arrow"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M5 14h16M15 7l7 7-7 7" fill="none" stroke="#2EC4B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="step"><div class="n">STEP 2</div><div class="t">Run on LatamGPT, other LAC open-weight models, and reference models<small>Mistral-7B, Llama-3-8B, GPT-4o</small></div></div>
+    <div class="arrow"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M5 14h16M15 7l7 7-7 7" fill="none" stroke="#2EC4B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="step"><div class="n">STEP 3</div><div class="t">Score responses, EN and ES</div></div>
+    <div class="arrow"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M5 14h16M15 7l7 7-7 7" fill="none" stroke="#2EC4B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="step"><div class="n">STEP 4</div><div class="t">Aggregate report + responsible disclosure to developers</div></div>
+  </div>
+  <p class="note">Needs no wet lab, no biological materials, modest compute. Reproducible remotely anywhere.</p>
+  <div class="footer"><span>AISDOM | BioPREVAIL x CEPI Challenge 2026-27</span><span class="num">5</span></div>
+</section>
+
+<!-- 6 READINESS -->
+<section>
+  <div class="kicker">Status</div>
+  <h2 style="margin-bottom:22px;">Current readiness</h2>
+  <ul class="plain">
+    <li><b>Public repository:</b> github.com/yefry08/biosecurity-llm-evaluation-lac</li>
+    <li>Evaluation pipeline running in Spanish and English</li>
+    <li><b>Models tested:</b> LatamGPT and other LAC open-weight models, plus reference models</li>
+    <li><b>Headline result:</b> <mark class="ph">[INSERT HEADLINE RESULT]</mark></li>
+    <li><b>Next:</b> expert review, formal publication, developer follow-up</li>
+  </ul>
+  <div class="footer"><span>AISDOM | BioPREVAIL x CEPI Challenge 2026-27</span><span class="num">6</span></div>
+</section>
+
+<!-- 7 MONTH SIX -->
+<section>
+  <div class="kicker">Deliverables</div>
+  <h2 style="margin-bottom:22px;">What will be true at month six</h2>
+  <ol class="num">
+    <li>Technical report (EN) and policy brief (ES) published, covering every model tested</li>
+    <li>Open, documented evaluation set and harness reviewed by biosecurity experts</li>
+    <li>Findings shared with developers through responsible disclosure, with at least one documented mitigation round</li>
+    <li>Regional briefing for biosafety officers and regulators in LAC</li>
+  </ol>
+  <div class="footer"><span>AISDOM | BioPREVAIL x CEPI Challenge 2026-27</span><span class="num">7</span></div>
+</section>
+
+<!-- 8 BUDGET -->
+<section>
+  <div class="kicker">Budget</div>
+  <h2 style="margin-bottom:18px;">USD 50,000</h2>
+  <div class="chart">
+    <div class="row"><div class="lab">Research staff (2 part-time regional evaluators, 6 months)</div><div class="bar-wrap"><div class="bar" style="width:648px"></div><div class="amt">$18,000</div></div></div>
+    <div class="row"><div class="lab">Biosecurity expert advisory and prompt-set review</div><div class="bar-wrap"><div class="bar" style="width:432px"></div><div class="amt">$12,000</div></div></div>
+    <div class="row"><div class="lab">Compute and API costs</div><div class="bar-wrap"><div class="bar" style="width:288px"></div><div class="amt">$8,000</div></div></div>
+    <div class="row"><div class="lab">Regional briefing and dissemination</div><div class="bar-wrap"><div class="bar" style="width:180px"></div><div class="amt">$5,000</div></div></div>
+    <div class="row"><div class="lab">Native-speaker Spanish review and localization</div><div class="bar-wrap"><div class="bar" style="width:108px"></div><div class="amt">$3,000</div></div></div>
+    <div class="row"><div class="lab">Secure data handling and responsible disclosure setup</div><div class="bar-wrap"><div class="bar" style="width:72px"></div><div class="amt">$2,000</div></div></div>
+    <div class="row"><div class="lab">Open-access publication and design</div><div class="bar-wrap"><div class="bar" style="width:72px"></div><div class="amt">$2,000</div></div></div>
+  </div>
+  <div class="footer"><span>AISDOM | BioPREVAIL x CEPI Challenge 2026-27</span><span class="num">8</span></div>
+</section>
+
+<!-- 9 SAFEGUARDS -->
+<section>
+  <div class="kicker">Safeguards</div>
+  <h2 style="margin-bottom:22px;">Dual-use safeguards</h2>
+  <ul class="plain">
+    <li>Aggregate, risk-category scoring; no actionable model outputs published</li>
+    <li>Full prompt set and raw outputs access-controlled, shared only with vetted researchers</li>
+    <li>Prompts stay at risk-category level, with no pathogen-specific protocols</li>
+    <li>Biosecurity expert review before release</li>
+    <li>Responsible disclosure to developers before publication</li>
+    <li>Every report states that a pass is not a safety guarantee</li>
+  </ul>
+  <div class="footer"><span>AISDOM | BioPREVAIL x CEPI Challenge 2026-27</span><span class="num">9</span></div>
+</section>
+
+<!-- 10 TEAM AND ASK -->
+<section>
+  <div class="kicker">Team and ask</div>
+  <div class="cols">
+    <div>
+      <h3>Team</h3>
+      <div class="person">
+        <p><span class="name">Yefry Osvaldo Núñez Rubí (lead):</span> ML and bioinformatics engineer; BSc Computer Science (PUCMM); studies AI and data science at the Matsuo-Iwasawa Lab, University of Tokyo; founder of AISDOM, the first AI safety community in the Dominican Republic (first bootcamp: 200+ registered participants, 8 speakers, no external funding).</p>
+      </div>
+      <div class="person"><p><mark class="ph">[TEAMMATE / ADVISOR 1: name, role, affiliation]</mark></p></div>
+    </div>
+    <div>
+      <h3>Ask from BioPREVAIL's network</h3>
+      <ul>
+        <li>Biosecurity expert reviewers</li>
+        <li>Access to regional biosafety officers and regulators</li>
+        <li>A channel to CEPI's biosecurity team on AI-use safeguards</li>
+        <li>Guidance on responsible-disclosure norms</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>AISDOM | BioPREVAIL x CEPI Challenge 2026-27</span><span class="num">10</span></div>
+</section>
+
+</body>
+</html>
